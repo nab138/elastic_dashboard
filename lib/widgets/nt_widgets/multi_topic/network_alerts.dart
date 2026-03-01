@@ -97,7 +97,9 @@ class NetworkAlerts extends NTWidget {
                 alertType = 'none';
               }
 
-              TextStyle? messageStyle = Theme.of(context).textTheme.bodyMedium;
+              TextStyle? messageStyle = Theme.of(
+                context,
+              ).textTheme.displaySmall;
 
               switch (alertType) {
                 case 'error':
@@ -107,7 +109,7 @@ class NetworkAlerts extends NTWidget {
                     contentPadding: const EdgeInsets.symmetric(horizontal: 8.0),
                     leading: const Icon(
                       Icons.cancel,
-                      size: 24,
+                      size: 48,
                       color: Colors.red,
                     ),
                     title: Text(alertMessage, style: messageStyle),
@@ -119,7 +121,7 @@ class NetworkAlerts extends NTWidget {
                     contentPadding: const EdgeInsets.symmetric(horizontal: 8.0),
                     leading: const Icon(
                       Icons.warning,
-                      size: 24,
+                      size: 48,
                       color: Colors.yellow,
                     ),
                     title: Text(alertMessage, style: messageStyle),
@@ -131,7 +133,7 @@ class NetworkAlerts extends NTWidget {
                     contentPadding: const EdgeInsets.symmetric(horizontal: 8.0),
                     leading: const Icon(
                       Icons.info,
-                      size: 24,
+                      size: 48,
                       color: Colors.green,
                     ),
                     title: Text(alertMessage, style: messageStyle),

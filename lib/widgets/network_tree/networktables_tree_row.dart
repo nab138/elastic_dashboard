@@ -12,6 +12,7 @@ import 'package:elastic_dashboard/widgets/draggable_containers/models/nt_widget_
 import 'package:elastic_dashboard/widgets/draggable_containers/models/widget_container_model.dart';
 import 'package:elastic_dashboard/widgets/network_tree/networktables_tree.dart';
 import 'package:elastic_dashboard/widgets/nt_widgets/multi_topic/camera_stream.dart';
+import 'package:elastic_dashboard/widgets/nt_widgets/multi_topic/status_display.dart';
 import 'package:elastic_dashboard/widgets/nt_widgets/multi_topic/yagsl_swerve_drive.dart';
 import 'package:elastic_dashboard/widgets/nt_widgets/nt_widget.dart';
 import 'package:elastic_dashboard/widgets/nt_widgets/single_topic/boolean_box.dart';
@@ -178,6 +179,14 @@ class NetworkTableTreeRow {
           topic: topic,
         );
       }
+
+      // if (hasRows(['Boolean', 'Text'])) {
+      //   return StatusDisplayModel(
+      //     ntConnection: ntConnection,
+      //     preferences: preferences,
+      //     topic: topic,
+      //   );
+      // }
 
       return null;
     }

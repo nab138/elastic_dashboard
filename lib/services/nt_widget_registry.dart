@@ -28,6 +28,7 @@ import 'package:elastic_dashboard/widgets/nt_widgets/multi_topic/profiled_pid_co
 import 'package:elastic_dashboard/widgets/nt_widgets/multi_topic/relay_widget.dart';
 import 'package:elastic_dashboard/widgets/nt_widgets/multi_topic/robot_preferences.dart';
 import 'package:elastic_dashboard/widgets/nt_widgets/multi_topic/split_button_chooser.dart';
+import 'package:elastic_dashboard/widgets/nt_widgets/multi_topic/status_display.dart';
 import 'package:elastic_dashboard/widgets/nt_widgets/multi_topic/subsystem_widget.dart';
 import 'package:elastic_dashboard/widgets/nt_widgets/multi_topic/three_axis_accelerometer.dart';
 import 'package:elastic_dashboard/widgets/nt_widgets/multi_topic/ultrasonic.dart';
@@ -396,6 +397,16 @@ class NTWidgetRegistry {
       minHeight: _normalSize * 2,
       defaultWidth: 2,
       defaultHeight: 2,
+    );
+
+    registerMultiTopic(
+      name: StatusDisplay.widgetType,
+      model: StatusDisplayModel.new,
+      widget: StatusDisplay.new,
+      fromJson: StatusDisplayModel.fromJson,
+      minWidth: _normalSize * 2,
+      minHeight: _normalSize,
+      defaultWidth: 2,
     );
 
     registerWithoutModel(
